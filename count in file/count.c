@@ -1,14 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 int main()
+    // c program to print number of characters, lines, tabs and blank space n file
 {
     FILE *fp;
-    char ch, filename;
+    char filename;
+    int ch;
     int n_char=0, n_blank=0, n_line=1, n_tabs=0;  // n_line is initialized to 1 because of logic being used  to detect new line is '\n', which only
                                                   // execute after 1st line, means it can't count Line 1.
 
     printf("enter file name to open:\n");
-    scanf("%c", &filename);
+    scanf("%s", &filename);
     fp = fopen("testfile.txt", "r");
 
     while(1)
